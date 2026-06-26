@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CartaFinanceira is a national AI readiness and financial literacy proposal for smarter financial decisions in Portugal.">
+    <meta property="og:title" content="Financial Driver's License | National AI Readiness & Literacy Proposal">
+    <meta property="og:description" content="An AI-powered financial assistant that helps people make smarter financial choices, reduce hidden costs, and improve literacy.">
+    <meta property="og:type" content="website">
+    <title>Financial Driver's License | National AI Readiness & Literacy Proposal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #0f172a;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2), 0 2px 4px -1px rgba(79, 70, 229, 0.06);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.2), 0 4px 6px -2px rgba(79, 70, 229, 0.1);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #4f46e5;
+            padding: 0.8rem 1.5rem;
+            border: 1px solid #4f46e5;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #f5f3ff;
+            transform: translateY(-2px);
+        }
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background-color: #ede9fe;
+            color: #5b21b6;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .ai-demo {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 1.5rem;
+        }
+        .pulse-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #10b981;
+            margin-right: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <span class="font-bold text-lg gradient-text">CartaFinanceira</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#problem" class="text-slate-600 hover:text-indigo-600 transition font-medium">The Problem</a>
+                <a href="#next-challenge" class="text-slate-600 hover:text-indigo-600 transition font-medium">The Next Challenge</a>
+                <a href="#solution" class="text-slate-600 hover:text-indigo-600 transition font-medium">The Solution</a>
+                <a href="#national-impact" class="text-slate-600 hover:text-indigo-600 transition font-medium">National Impact</a>
+                <a href="#pilot" class="text-slate-600 hover:text-indigo-600 transition font-medium">Pilot</a>
+            </div>
+            <div class="flex items-center space-x-3">
+                <a href="#pilot" class="btn-primary text-sm rounded-lg">Join the Pilot</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-20 pb-16">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-block mb-4 px-3 py-1 bg-white text-indigo-600 text-xs font-semibold uppercase tracking-wider rounded-full shadow-sm">
+                    National Innovation Proposal • Portugal
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+                    Optimize every financial decision <span class="gradient-text">before</span> you make it.
+                </h1>
+                <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+                    An AI-powered financial assistant that calculates true interest costs, maximizes tax returns (IRS/IVA), optimizes credit card rewards, and uncovers hidden budget surpluses in real-time.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#pilot" class="btn-primary rounded-lg text-center">Join the Pilot</a>
+                    <a href="#how-it-works" class="btn-secondary rounded-lg text-center">See Demo</a>
+                </div>
+                <div class="mt-8 flex items-center space-x-4 text-sm text-slate-500">
+                    <div class="flex items-center">
+                        <span class="pulse-dot"></span>
+                        <span>Currently in validation phase</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <div class="ai-demo">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-semibold text-slate-900">AI Optimizer Demo</h3>
+                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Active</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="bg-white p-3 rounded-lg shadow-sm">
+                            <p class="text-sm text-slate-600">You are buying a flight for €300</p>
+                        </div>
+                        <div class="bg-indigo-50 p-3 rounded-lg border-l-4 border-indigo-500">
+                            <p class="text-sm font-medium text-slate-900">💡 Optimization Found</p>
+                            <p class="text-xs text-slate-600 mt-1">Use your N26 card to avoid 3% foreign transaction fees (Save €9). Also, you have €150 unspent in your 'Dining Out' budget this month. Applying that reduces your out-of-pocket cost to just €150.</p>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm">
+                            <p class="text-sm text-slate-600">What if I put it on credit?</p>
+                        </div>
+                        <div class="bg-indigo-50 p-3 rounded-lg border-l-4 border-indigo-500">
+                            <p class="text-sm font-medium text-slate-900">⚠️ True Cost Analysis</p>
+                            <p class="text-xs text-slate-600 mt-1">Financing this €300 on your Visa (19% APR) over 6 months means paying €17.25 in interest. Total real cost: €317.25.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section id="problem" class="py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">The Problem: <span class="gradient-text">Financial Literacy in Crisis</span></h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">Most people get access to credit before receiving practical financial education. The data is alarming:</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="stat-card">
+                    <div class="text-4xl font-bold gradient-text mb-2">13%</div>
+                    <p class="text-slate-600">of the Portuguese population masters basic financial concepts.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="text-4xl font-bold gradient-text mb-2">74%</div>
+                    <p class="text-slate-600">of youth without financial literacy believe they know how to manage money.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="text-4xl font-bold gradient-text mb-2">59%</div>
+                    <p class="text-slate-600">of the Portuguese have short-term debt.</p>
+                </div>
+            </div>
+
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+                <h3 class="font-bold text-red-800 mb-2">⚠️ The Cost of Ignorance</h3>
+                <p class="text-slate-700">In Portugal, young people have some of the highest rates of payment difficulties. This "overconfidence" significantly increases the risk of poorly informed financial decisions, fraud, and financial losses.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Next Challenge -->
+    <section id="next-challenge" class="py-16 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">
+                The Next Challenge:
+                <span class="gradient-text">AI Will Spend Money For Us</span>
+            </h2>
+            <p class="text-lg text-slate-600 mb-6">
+                Financial literacy was designed for a world where every purchase decision was made directly by a human.
+                That world is changing.
+            </p>
+            <p class="text-slate-700 mb-4">
+                Within the next decade, millions of people are expected to rely on AI assistants for financial decisions.
+            </p>
+            <ul class="space-y-2 text-slate-700 list-disc list-inside mb-6">
+                <li>Booking travel</li>
+                <li>Purchasing subscriptions</li>
+                <li>Managing household expenses</li>
+                <li>Comparing loans and financial products</li>
+                <li>Negotiating services</li>
+                <li>Increasingly participating in purchasing decisions</li>
+            </ul>
+            <p class="text-slate-700 mt-6">
+                These AI systems will increasingly interact with bank accounts, payment systems, credit products and digital wallets.
+            </p>
+            <p class="text-slate-700 mt-4">
+                The challenge is no longer only:
+            </p>
+            <div class="bg-red-50 border border-red-200 rounded-lg p-4 my-4">
+                <strong>
+                    "Can people make good financial decisions?"
+                </strong>
+            </div>
+            <p class="text-slate-700">
+                The new challenge becomes:
+            </p>
+            <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-4 my-4">
+                <strong>
+                    "Can people and their AI agents make good financial decisions together?"
+                </strong>
+            </div>
+            <p class="text-slate-700">
+                Portugal has an opportunity to become one of the first countries to prepare citizens for this future by creating an AI-powered financial literacy framework before AI-driven spending becomes mainstream.
+            </p>
+        </div>
+    </section>
+
+    <!-- The Solution -->
+    <section id="solution" class="py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">Our Solution: <span class="gradient-text">Financial Driver's License</span></h2>
+                    <p class="text-lg text-slate-600 mb-6">We don't tell users what they can't buy. We empower them with advanced financial optimization so they can buy smarter, avoid hidden monetary hurts, and leverage benefits they didn't know existed.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="font-semibold text-slate-900">Monetary Impact Transparency</h4>
+                                <p class="text-slate-600">Shows the true cost of purchases by calculating exact interest over time, preventing users from hurting themselves financially without realizing it.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="font-semibold text-slate-900">Tax & Benefit Discovery</h4>
+                                <p class="text-slate-600">Alerts users to actionable IRS refunds, IVA-free claim windows, and state benefits they are overlooking.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="font-semibold text-slate-900">Reward & Cashback Maximization</h4>
+                                <p class="text-slate-600">Recommends the exact credit card or payment method that yields the highest cashback or points for that specific transaction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
+                    <div class="mb-6">
+                        <h3 class="font-bold text-slate-900 mb-2">A New Paradigm</h3>
+                        <p class="text-slate-600 text-sm">We are not just another financial management app. We are proposing the first integrated financial learning system designed for the AI era.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-slate-50 rounded-lg">
+                            <span class="text-sm font-medium text-slate-700">Traditional Apps</span>
+                            <span class="text-xs text-slate-500">Only record data</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-indigo-50 rounded-lg">
+                            <span class="text-sm font-medium text-indigo-700">CartaFinanceira</span>
+                            <span class="text-xs text-indigo-600">Optimizes transactions</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 rounded-lg">
+                            <span class="text-sm font-medium text-slate-700">Traditional Education</span>
+                            <span class="text-xs text-slate-500">Generic and theoretical</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-indigo-50 rounded-lg">
+                            <span class="text-sm font-medium text-indigo-700">CartaFinanceira</span>
+                            <span class="text-xs text-indigo-600">Actionable & real-time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-16 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">How It Works: <span class="gradient-text">AI in Action</span></h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">Every financial decision becomes an opportunity to save money and learn. See a real example:</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6">
+                    <div class="ai-demo">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-semibold text-slate-900">Practical Case: Buying a €300 Laptop</h3>
+                            <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full">Optimizing</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="bg-white p-3 rounded-lg shadow-sm">
+                                <p class="text-sm text-slate-600">You are at checkout for a €300 laptop.</p>
+                            </div>
+                            <div class="bg-indigo-50 p-3 rounded-lg border-l-4 border-indigo-500">
+                                <p class="text-sm font-medium text-slate-900">⚠️ True Cost & Alternatives</p>
+                                <p class="text-xs text-slate-600 mt-1">Financing on your Visa (18% APR) over 12 months = €332 total cost. <br><br>However, you have a €150 unspent surplus in your 'Transport' budget this month. Applying this reduces your financed amount to €150, saving you €16 in interest.</p>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg shadow-sm">
+                                <p class="text-sm text-slate-600">Any other benefits I'm missing?</p>
+                            </div>
+                            <div class="bg-indigo-50 p-3 rounded-lg border-l-4 border-indigo-500">
+                                <p class="text-sm font-medium text-slate-900">💡 Reward & Tax Optimization</p>
+                                <p class="text-xs text-slate-600 mt-1">1. Pay with your Revolut Metal to earn 1% cashback (Save €3).<br>2. If this is for freelance work, you can deduct 23% IVA on your next IRS declaration (Save €69).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-3">Transparent by Design</h3>
+                        <p class="text-slate-600 mb-4">We believe financial education should be transparent. We do not rely on hidden proprietary algorithms or black-box models.</p>
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <span class="feature-badge">1</span>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900">Public Frameworks</h4>
+                                    <p class="text-sm text-slate-600">Built on established guidelines from the Bank of Portugal and OECD/INFE.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="feature-badge">2</span>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900">Explainable AI</h4>
+                                    <p class="text-sm text-slate-600">The system always explains the math behind interest calculations and tax deductions.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="feature-badge">3</span>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900">No Proprietary Lock-in</h4>
+                                    <p class="text-sm text-slate-600">The core educational logic is transparent and auditable by regulators and partners.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- National Impact -->
+    <section id="national-impact" class="py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">National Impact & AI Readiness</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">Portugal faces a significant financial literacy challenge, creating a unique opportunity to build scalable, future-proof public infrastructure.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm border border-slate-100">
+                    <div>
+                        <h4 class="font-semibold text-slate-900">Target Demographics</h4>
+                        <p class="text-sm text-slate-600">Youth 18-29, new credit users, seniors</p>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-2xl font-bold gradient-text">2.1M</div>
+                        <div class="text-xs text-slate-500">potential beneficiaries</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm border border-slate-100">
+                    <div>
+                        <h4 class="font-semibold text-slate-900">Economic Burden</h4>
+                        <p class="text-sm text-slate-600">Defaults, over-indebtedness, fraud</p>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-2xl font-bold gradient-text">€840M</div>
+                        <div class="text-xs text-slate-500">estimated annual cost</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm border border-slate-100">
+                    <div>
+                        <h4 class="font-semibold text-slate-900">Collaboration Model</h4>
+                        <p class="text-sm text-slate-600">Public-private partnership</p>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-2xl font-bold gradient-text">Open</div>
+                        <div class="text-xs text-slate-500">research & policy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilot -->
+    <section id="pilot" class="py-16 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Pilot Program: <span class="gradient-text">Be Part of the Change</span></h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">We are designing a pilot to test the effectiveness of our AI as a financial mentor. We are currently seeking partners and institutions to launch this phase.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100">
+                    <div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Target Scale</h3>
+                    <p class="text-slate-600 text-sm">Aiming for 5,000 users (Youth 18-29, new credit users, university students)</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100">
+                    <div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Proposed Duration</h3>
+                    <p class="text-slate-600 text-sm">6 months of continuous monitoring with bi-weekly impact metrics</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100">
+                    <div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Success Metrics</h3>
+                    <p class="text-slate-600 text-sm">Default rate, financial literacy, savings rate, user satisfaction</p>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-6 mt-12 bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+                <h3 class="font-bold text-slate-900 mb-3 text-2xl">
+                    Why Start Now?
+                </h3>
+                <p class="text-slate-600 text-lg">
+                    Most countries are discussing AI regulation after the technology arrives.
+                    Portugal can instead become a leader in proactive AI financial education.
+                </p>
+                <p class="text-slate-600 mt-4 text-lg">
+                    This pilot would test not only whether AI can improve financial literacy today, but whether citizens can safely interact with future AI agents that will increasingly participate in purchasing and credit decisions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evidence & Sources -->
+    <section class="py-12 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6 text-center">Evidence & Sources</h2>
+            <p class="text-sm text-slate-600 mb-8 text-center">Our mission is grounded in data and official studies from reputable institutions. Here are the key references supporting our initiative:</p>
+            
+            <div class="space-y-4 text-sm">
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-semibold text-slate-800 mb-1">4th Survey on the Financial Literacy of the Portuguese Population 2023</h4>
+                    <p class="text-slate-600 text-xs mb-2">Conducted by the National Council of Financial Supervisors (CNSF).</p>
+                    <a href="https://www.todoscontam.pt/pt-pt/inquerito-literacia-financeira-da-populacao-portuguesa-2023" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline text-xs break-all">https://www.todoscontam.pt/pt-pt/inquerito-literacia-financeira-da-populacao-portuguesa-2023</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-semibold text-slate-800 mb-1">CNSF discloses results of the 4th Survey on Financial Literacy</h4>
+                    <p class="text-slate-600 text-xs mb-2">Bank of Portugal Client Portal.</p>
+                    <a href="https://clientebancario.bportugal.pt/pt-pt/noticias/cnsf-divulga-resultados-do-4o-inquerito-literacia-financeira-da-populacao-portuguesa" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline text-xs break-all">https://clientebancario.bportugal.pt/pt-pt/noticias/cnsf-divulga-resultados-do-4o-inquerito-literacia-financeira-da-populacao-portuguesa</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-semibold text-slate-800 mb-1">OECD/INFE Global Financial Literacy Indicator</h4>
+                    <p class="text-slate-600 text-xs mb-2">Portugal ranked 13th in the global financial literacy indicator.</p>
+                    <a href="https://www.cnsf.com.pt/conselho-nacional-de-supervisores-financeiros-divulga-resultados-do-inquerito-da-ocdeinfe-literacia" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline text-xs break-all">https://www.cnsf.com.pt/conselho-nacional-de-supervisores-financeiros-divulga-resultados-do-inquerito-da-ocdeinfe-literacia</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-semibold text-slate-800 mb-1">Report of the 4th Survey on Financial Literacy (PDF)</h4>
+                    <p class="text-slate-600 text-xs mb-2">Conducted in early 2023, post-pandemic context.</p>
+                    <a href="https://www.todoscontam.pt/sites/default/files/2024-04/relatorio4ilf2023.pdf" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline text-xs break-all">https://www.todoscontam.pt/sites/default/files/2024-04/relatorio4ilf2023.pdf</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-semibold text-slate-800 mb-1">OECD/INFE Report on Financial Literacy</h4>
+                    <p class="text-slate-600 text-xs mb-2">Archive page from the General Directorate of Books, Archives and Libraries (DGLAB).</p>
+                    <a href="http://bibliotecas.dglab.gov.pt/pt/noticias/Pginas%20de%20Arquivo/Relatorio-OCDE-Literacia-Financeira-2023.aspx" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline text-xs break-all">http://bibliotecas.dglab.gov.pt/pt/noticias/Pginas%20de%20Arquivo/Relatorio-OCDE-Literacia-Financeira-2023.aspx</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-semibold text-slate-800 mb-1">IAVE - PISA 2022 Financial Literacy (PDF)</h4>
+                    <p class="text-slate-600 text-xs mb-2">Portugal scored 494 points (OECD average: 498).</p>
+                    <a href="https://iave.pt/wp-content/uploads/2024/06/Brochura_Literacia-financeiraPISA2022.pdf" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline text-xs break-all">https://iave.pt/wp-content/uploads/2024/06/Brochura_Literacia-financeiraPISA2022.pdf</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-semibold text-slate-800 mb-1">PISA 2022 REPORT – PORTUGAL RESULTS</h4>
+                    <p class="text-slate-600 text-xs mb-2">Portuguese students dropped from 7th to 9th position in the global financial literacy indicator.</p>
+                    <a href="https://segurosecidadania.pt/?p=1409" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline text-xs break-all">https://segurosecidadania.pt/?p=1409</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-semibold text-slate-800 mb-1">Portugal in line with OECD average in PISA assessment</h4>
+                    <p class="text-slate-600 text-xs mb-2">Analysis of the PISA financial literacy module.</p>
+                    <a href="https://www.todoscontam.pt/pt-pt/noticias/portugal-em-linha-com-media-da-ocde-na-avaliacao-do-pisa-sobre-literacia-financeira" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline text-xs break-all">https://www.todoscontam.pt/pt-pt/noticias/portugal-em-linha-com-media-da-ocde-na-avaliacao-do-pisa-sobre-literacia-financeira</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-semibold text-slate-800 mb-1">Financial literacy of Portuguese students fell in line with other domains</h4>
+                    <p class="text-slate-600 text-xs mb-2">Official Government of Portugal statement.</p>
+                    <a href="https://portugal.gov.pt/gc24/comunicacao/comunicados/literacia-financeira-dos-alunos-portugueses-caiu-em-linha-com-os-outros-dominios-avaliados-pelo-pisa" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline text-xs break-all">https://portugal.gov.pt/gc24/comunicacao/comunicados/literacia-financeira-dos-alunos-portugueses-caiu-em-linha-com-os-outros-dominios-avaliados-pelo-pisa</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-semibold text-slate-800 mb-1">Investing in Education for Financial Literacy in Portugal</h4>
+                    <p class="text-slate-600 text-xs mb-2">Direção-Geral da Educação (DGE) news.</p>
+                    <a href="https://www.dge.mec.pt/noticias/investir-na-educacao-para-literacia-financeira-em-portugal" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline text-xs break-all">https://www.dge.mec.pt/noticias/investir-na-educacao-para-literacia-financeira-em-portugal</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-semibold text-slate-800 mb-1">Disclosure of the results of the 2nd Survey on Financial Literacy</h4>
+                    <p class="text-slate-600 text-xs mb-2">Bank of Portugal publication identifying youth and elderly as most vulnerable groups.</p>
+                    <a href="https://www.bportugal.pt/page/divulgacao-dos-resultados-do-2o-inquerito-literacia-financeira-da-populacao-portuguesa" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline text-xs break-all">https://www.bportugal.pt/page/divulgacao-dos-resultados-do-2o-inquerito-literacia-financeira-da-populacao-portuguesa</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-semibold text-slate-800 mb-1">Report of the 3rd Survey on Financial Literacy (PDF)</h4>
+                    <p class="text-slate-600 text-xs mb-2">2020 comparison where Portugal ranked 7th globally.</p>
+                    <a href="https://www.todoscontam.pt/sites/default/files/2021-06/relatorio3inqlf.pdf" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline text-xs break-all">https://www.todoscontam.pt/sites/default/files/2021-06/relatorio3inqlf.pdf</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-semibold text-slate-800 mb-1">Financial literacy in Portugal: study of gender influence (PDF)</h4>
+                    <p class="text-slate-600 text-xs mb-2">Academic study on young adults and university students.</p>
+                    <a href="https://comum.rcaap.pt/bitstreams/2578de64-aaab-4edc-991b-df40116613d2/download" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline text-xs break-all">https://comum.rcaap.pt/bitstreams/2578de64-aaab-4edc-991b-df40116613d2/download</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-semibold text-slate-800 mb-1">Ganhar a Poupar – Financial literacy project</h4>
+                    <p class="text-slate-600 text-xs mb-2">Educational video project based on the Financial Education Framework.</p>
+                    <a href="https://www.youtube.com/watch?v=Ng4nbcLKk3c" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline text-xs break-all">https://www.youtube.com/watch?v=Ng4nbcLKk3c</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-semibold text-slate-800 mb-1">Financial Literacy and Pensions (PDF)</h4>
+                    <p class="text-slate-600 text-xs mb-2">CFP study concluding that higher literacy leads to better retirement income planning.</p>
+                    <a href="https://www.cfp.pt/uploads/publicacoes_ficheiros/po-04-2024.pdf" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline text-xs break-all">https://www.cfp.pt/uploads/publicacoes_ficheiros/po-04-2024.pdf</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <span class="font-bold text-lg">CartaFinanceira</span>
+                    </div>
+                    <p class="text-slate-400 text-sm">Learn to use credit before paying for mistakes. A national initiative focused on AI readiness and financial literacy.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Proposal</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="#how-it-works" class="hover:text-white transition">How It Works</a></li>
+                        <li><a href="#pilot" class="hover:text-white transition">Pilot Program</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Context</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="#problem" class="hover:text-white transition">The Problem</a></li>
+                        <li><a href="#next-challenge" class="hover:text-white transition">The Next Challenge</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-400 text-sm mb-4 md:mb-0">© 2024 CartaFinanceira. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
